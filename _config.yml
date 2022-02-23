@@ -2,7 +2,7 @@ title: 'JusticeDAO'
 description: "living in the spread between possible and impossible futures"
 baseurl: "/"
 url: "https://JusticeDAO.github.io"
-theme: jekyll-theme-console
+#theme: jekyll-theme-console
 
 header_pages:
   - index.md
@@ -14,7 +14,7 @@ footer: '<a href="/site/contact">join forces</a>'
 
 # Build settings
 markdown: kramdown
-# remote_theme: b2a3e8/jekyll-theme-console
+remote_theme: b2a3e8/jekyll-theme-console
 
 plugins:
   - jekyll-spaceship

@@ -278,7 +278,7 @@ a {
 }
 
 .background-landing {
-  background: url('{{ "/assets/img/triangle.svg" | prepend: site.baseurl }}');
+  background: url("{{ '/assets/img/triangle.svg' | prepend: site.baseurl }}");
   background-repeat: no-repeat;
   background-position:center top;
   position: absolute;

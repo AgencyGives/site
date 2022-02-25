@@ -1,0 +1,68 @@
+# > quarter: eg Q1, Q2, Q3, Q4
+# > title-url: Link to your timeline entry, university or work place
+# > title: Name of your timeline entry, university or work place
+# > description: The description under the title
+# > tags: List of tags you want to associate with the entry
+# > timeline-side: The side on which you want to display the entry: left or right
+
+# Example of a timeline entry
+# - title: airbnb
+#   title-url: https://example.com/
+#   date: Sep 2019 - Present
+#   subtitle: Fullstack Developer
+#   tags:
+#     - tag: React
+#     - tag: Javascript
+#     - tag: Ruby
+#     - tag: Rails
+#   timeline-side: right
+
+- quarter: Q1
+  title-url: 
+  title: Initial launch & Seed funding
+  steps:
+    - step: Creation of JusticeDAO
+    - step: Promotion of International Ambassador Program
+  tags:
+    - tag: 1Hive
+    - tag: CommonStack
+  timeline-side: right
+
+- quarter: Q2
+  title-url:
+  title: $JUSTICE Token launch
+  steps:
+    - step: Launch of the $JUSTICE through a liquidity bootstrapping pool
+    - step: Development of DAO tooling for social movements
+    - step: Creation of DAOFactory on PrimeDAO
+  tags:
+    - tag: PrimeDAO
+  timeline-side: left
+
+- quarter: Q3
+  title-url:
+  title: Invite social movements to the ecosystem
+  steps:
+    - step: Connecting social movements to the JusticeDAO ecosystem
+    - step: Integrating as many oracle solutions to bring off-chain data on-chain to allow for social movements to better use DeFi in their daily activities
+    - step: Deployment on various decentralized protocols
+  tags:
+    - tag: Harmony
+    - tag: NEAR
+    - tag: Aleo
+    - tag: Aztec
+    - tag: Stacks
+  timeline-side: right
+
+- quarter: Q4
+  title-url:
+  title: Preperation for mass-adoption
+  steps:
+    - step: Creating web2-web3 DAO bridges to make DAOs as seamless of an experience as possible even for the non-literate
+    - step: Deployment on more decentralized and distributed protocols
+  tags:
+    - tag: Agoric
+    - tag: Holochain
+    - tag: Mina
+    - tag: Oasis
+  timeline-side: left

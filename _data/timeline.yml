@@ -18,7 +18,7 @@
 #   timeline-side: right
 
 - quarter: Q1
-  title-url: 
+  title-url:
   title: Initial launch & Seed funding
   steps:
     - step: Creation of JusticeDAO
@@ -56,7 +56,7 @@
 
 - quarter: Q4
   title-url:
-  title: Preperation for mass-adoption
+  title: Preparation for mass-adoption
   steps:
     - step: Creating web2-web3 DAO bridges to make DAOs as seamless of an experience as possible even for the non-literate
     - step: Deployment on more decentralized and distributed protocols

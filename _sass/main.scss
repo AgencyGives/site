@@ -1,6 +1,6 @@
 /* Imports */
 
-@import url("https://fonts.googleapis.com/css?family=Monda&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Monda:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap");
 
 /* Variables */
@@ -13,7 +13,7 @@ $font-family-numbers: 'Oxygen Mono', monospace;
 $font-family-headings: 'Monda', monospace;
 $font-size-base: 1rem !default;
 $font-size-h1: 2rem !default;
-$font-weight-strong: 600;
+$font-weight-strong: 700;
 $text-color: #fff !default;
 $bg-color: #171819;
 $card-bg-color: linear-gradient(
@@ -75,6 +75,10 @@ a {
   &:hover {
     color: $text-color;
   }
+}
+
+.color {
+  color: $primary-color;
 }
 
 .highlight-title {
@@ -262,7 +266,6 @@ a {
 
 .footer a {
   color: $primary-color;
-
   &:hover,
   &:focus {
     background: $bg-color;
@@ -271,6 +274,13 @@ a {
 }
 
 /* Landing Page */
+
+.logo {
+  letter-spacing: -1.8px;
+}
+.logo-part1 {
+  font-weight: 300;
+}
 
 #landing {
   background: linear-gradient(180deg, black, transparent);
@@ -664,6 +674,7 @@ a {
   display: inline-block;
   margin-bottom: 0.25rem;
   padding: 0.5rem;
+  background: #313131;
 }
 
 /* Contact Card */

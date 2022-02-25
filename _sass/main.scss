@@ -33,6 +33,7 @@ html {
   font-weight: normal;
   height: 100%;
   overflow: hidden;
+  letter-spacing: -0.2px;
 }
 
 body {
@@ -100,6 +101,10 @@ a {
   }
 }
 
+.center {
+  text-align: center;
+}
+
 /* Nav */
 .nav-bar {
  height: 30px;
@@ -118,10 +123,6 @@ a {
 .text-body {
   max-width: 580px;
   margin: -80px auto 0 auto;
-}
-
-.text {
-  padding-bottom: 8px;
 }
 
 .text-rotate {
@@ -513,6 +514,10 @@ a {
 }
 
 /* Timeline Section */
+
+.step {
+  padding-bottom: 8px;
+}
 
 .section-timeline {
   text-align: center;

@@ -15,7 +15,7 @@ $font-size-base: 1rem !default;
 $font-size-h1: 2rem !default;
 $font-weight-strong: 600;
 $text-color: #fff !default;
-$bg-color: rgba(43, 45, 47, 1);
+$bg-color: #171819;
 $card-bg-color: linear-gradient(
   145deg,
   rgba(115, 115, 115, 0.15) 15%,
@@ -55,9 +55,13 @@ h2 {
   color: $primary-color;
 }
 
-h1,h2,h3,h4 {
+h1,h2,h3 {
   font-family: $font-family-headings;
   line-height: 1.34;
+}
+
+h4 {
+    line-height: 1.74;
 }
 
 p {
@@ -95,9 +99,9 @@ a {
 /* Nav */
 .nav-bar {
  height: 30px;
- background-color: black;
- position: sticky;
+ position: absolute;
  text-align: right;
+ right: 0px;
  padding: 2rem 3rem;
 }
 
@@ -108,8 +112,8 @@ a {
 /* Text section */
 
 .text-body {
-  width: 80%;
-  margin: -140px auto 0 auto;
+  max-width: 580px;
+  margin: -80px auto 0 auto;
 }
 
 .text {
@@ -168,14 +172,14 @@ a {
     inset -1px -2px 2px rgba(210, 210, 210, 0.4);
 }
 
-.neumorphism-card {
-  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 1),
-    inset -2px -2px 4px rgba(99, 99, 99, 1);
-}
+// .neumorphism-card {
+//   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 1),
+//     inset -2px -2px 4px rgba(99, 99, 99, 1);
+// }
 
-.neumorphism-card-big {
-  box-shadow: 5px 5px 4px #161718, -5px -5px 4px #404346;
-}
+// .neumorphism-card-big {
+//   box-shadow: 5px 5px 4px #161718, -5px -5px 4px #404346;
+// }
 
 /* Preloader */
 
@@ -278,7 +282,7 @@ a {
 }
 
 .background-landing {
-  background: url("{{ '/assets/img/triangle.svg' | prepend: site.baseurl }}");
+  background: url("https://justicedao.github.io/site/assets/img/triangle.svg");
   background-repeat: no-repeat;
   background-position:center top;
   position: absolute;
@@ -499,6 +503,10 @@ a {
 }
 
 /* Timeline Section */
+
+.section-timeline {
+  text-align: center;
+}
 
 .timeline-wrapper {
   .timeline {

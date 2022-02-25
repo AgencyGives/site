@@ -1,11 +1,7 @@
 <h1 class="title">{{site.timeline_title}}</h1>
 <p class="subtitle">
-  For more information, have a look at my
-  <a class="highlight-link" href="{{site.cv_download_link}}" target="_blank" rel="noreferrer">
-    curriculum vitae
-  </a>.
+  The road towards a just and beautiful world
 </p>
-
 <div class="timeline-wrapper">
   <ul class="timeline">
     {% for event in site.data.timeline %}
@@ -14,19 +10,19 @@
           <div class="direction-l">
             <div class="flag-wrapper">
               <span class="hexagon"></span>
-              <span class="flag neumorphism-button" data-aos="zoom-in-right">
+              <span class="flag" data-aos="zoom-in-right">
                 <a href="{{event.title-url}}" target="_blank" rel="noreferrer">
                   <span>{{event.title}}</span>
                 </a>
               </span>
-              <span class="time-wrapper" data-aos="zoom-in-right">
-                <span class="time neumorphism-card">{{event.date}}</span>
-              </span>
+              <!-- <span class="time-wrapper" data-aos="zoom-in-right">
+                <span class="time">{{event.date}}</span>
+              </span> -->
             </div>
             <div class="desc neumorphism-card" data-aos="zoom-in-right">
               {% if event.steps %}
                 <div class="step-wrapper">
-                  {% for tag in event.steps %}
+                  {% for step in event.steps %}
                     <span class="step">{{step.step}}</span>
                   {% endfor %}
                 </div>
@@ -49,17 +45,24 @@
           <div class="direction-r">
             <div class="flag-wrapper">
               <span class="hexagon"></span>
-              <span class="flag neumorphism-button" data-aos="zoom-in-left">
+              <span class="flag" data-aos="zoom-in-left">
                 <a href="{{event.title-url}}" target="_blank" rel="noreferrer">
                   <span>{{event.title}}</span>
                 </a>
               </span>
-              <span class="time-wrapper" data-aos="zoom-in-left">
-                <span class="time neumorphism-card">{{event.date}}</span>
-              </span>
+              <!-- <span class="time-wrapper" data-aos="zoom-in-left">
+                <span class="time">{{event.date}}</span>
+              </span> -->
             </div>
             <div class="desc neumorphism-card" data-aos="zoom-in-left">
               {{event.subtitle}}
+              {% if event.steps %}
+                <div class="step-wrapper">
+                  {% for step in event.steps %}
+                    <span class="step">{{step.step}}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
               {% if event.tags %}
                 <div class="tag-wrapper">
                   {% for tag in event.tags %}

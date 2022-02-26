@@ -115,6 +115,9 @@ a {
 }
 
 @media only screen and (max-width: 600px) {
+  .nav-bar {
+    padding: 1rem 1rem;
+  }
   .nav-item {
     font-size: 0.8rem;
   }
@@ -326,8 +329,17 @@ a {
 }
 
 .landing-subtitle {
+    font-size: 1rem ;
 margin-bottom: 10%;
+line-height: 1.78;
+
 }
+@media only screen and (max-width: 480px) {
+  .landing-subtitle {
+    font-size: 0.8rem;
+  }
+}
+
 //
 // .landing-subtitle h3 {
 //   display: inline-block; text-align: left;
@@ -531,6 +543,12 @@ margin-bottom: 10%;
   background-color: #232323;
     border-radius: 4px;
     padding: 0.5rem 0.2rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .step-wrapper {
+    font-size: 0.76rem;
+  }
 }
 
 .step {

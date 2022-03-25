@@ -33,6 +33,24 @@ $grey: #3F3F3F;
 
 /* General */
 
+.post {
+background: $primary-color;
+border-radius: 20px;
+max-width: 500px;
+padding: 10px;
+margin: auto;
+}
+
+.section1 {
+
+}
+
+.user1 {
+  position: absolute;
+  top: 40px;
+  max-width: 150px;
+}
+
 html {
   background: $bg-color;
   color: $text-color;
@@ -107,17 +125,6 @@ a {
     box-shadow: inset 0 -2rem 0 0 $primary-color;
     color: $text-color;
   }
-}
-
-.post {
-  position: absolute;
-width: 696px;
-height: 697px;
-left: 1764px;
-top: 1205px;
-
-background: #FFFFFF;
-border-radius: 30px;
 }
 
 .center {
@@ -311,66 +318,38 @@ border-radius: 30px;
 /* Landing Page */
 
 #star-bg {
-  background: url("https://justicedao.github.io/site/assets/img/bg.png");
-  background-repeat: repeat-y;
+  background: url("../../assets/img/bg.png");
+  background-repeat: repeat;
+  background-size: contain;
 }
 
 .logo {
   text-align: left;
+  max-width: 200px;
   letter-spacing: -1.8px;
   top: 0%;
 }
-.logo-part1 {
-  font-weight: 300;
-}
 
-#landing {
-  background: linear-gradient(180deg, black, transparent);
-  color: $text-color;
-  display: flex;
-  height: 100%;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.background-landing {
-  background: url("https://justicedao.github.io/site/assets/img/triangle.svg");
-  background-repeat: no-repeat;
-  background-position:center top;
+.kitten {
   position: absolute;
-  opacity: 0.6;
-  top: 15%;
-  bottom: 0px;
-  left: 0;
-  right: 0;
+    top: 0%;
+    right: 0%;
+    max-width: 200px;
 }
 
-.landing-title {
-  left: 0;
-  margin: 0.5rem;
-  padding: 0.5rem;
+.whale {
   position: absolute;
-  right: 0;
-  top: 40%;
+  top: 50%;
+  left: 30%;
+  max-width: 800px;
 }
 
-.landing-subtitle {
-    font-size: 1rem ;
-margin-bottom: 10%;
-line-height: 1.78;
 
-}
 @media only screen and (max-width: 480px) {
   .landing-subtitle {
     font-size: 0.8rem;
   }
 }
-
-//
-// .landing-subtitle h3 {
-//   display: inline-block; text-align: left;
-//   padding-top: 4px;
-// }
 
 .landing-icons {
   display: flex;
@@ -1056,4 +1035,183 @@ line-height: 1.78;
   100% {
     bottom: 0;
   }
+}
+
+/* slider */
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+$color-range-output: #383c42;
+$color-input-placeholder: #c3c4c6;
+$height-range-bounds: 22px;
+$background-color-range-thumb: #333940;
+$radius-range-thumb: 100px;
+$height-range-thumb: 24px;
+$width-range-thumb: 24px;
+$size-range-thumb-shadow: 25px;
+$color-range-thumb-shadow: rgba(#000, .5);
+$shadow-offset-y-range-thumb: 4px;
+$shadow-offset-x-range-thumb: 0px;
+$border-width-range-thumb: 6px;
+$border-color-range-thumb: #fff;
+$width-range-track: 100%;
+$height-range-track: 4px;
+$radius-range-track: 100px;
+$fill-range-track: #e6e6e6;
+$fill-range-track-active: #60cd18;
+
+//Output
+$height-range-output: 60px;
+$min-width-range-output: 32px;
+$padding-x-range-output: 20px;
+$size-range-output-arrow: 10px;
+$offset-y-range-output: 4px;
+
+.range {
+	@mixin range-track() {
+		box-sizing: border-box;
+		width: $width-range-track;
+		height: $height-range-track;
+		background: $fill-range-track;
+		border-radius: $radius-range-track;
+	}
+	@mixin range-thumb() {
+		box-sizing: border-box;
+		box-shadow: $shadow-offset-x-range-thumb $shadow-offset-y-range-thumb $size-range-thumb-shadow $color-range-thumb-shadow;
+		border: $border-width-range-thumb solid $border-color-range-thumb;
+		height: $height-range-thumb;
+		width: $width-range-thumb;
+		border-radius: $radius-range-thumb;
+		background: $background-color-range-thumb;
+		cursor: pointer;
+	}
+
+	position: relative;
+
+	//Native
+	input[type=range] {
+		appearance: none;
+		padding: 0;
+		width: $width-range-track;
+		height: $height-range-bounds;
+		cursor: pointer;
+		display: block;
+
+		&:focus {
+			outline: none;
+		}
+		&[disabled] {
+			opacity: .3;
+			cursor: default;
+		}
+	}
+
+	//Plugin wrapper
+	.rangeslider {
+		position: relative;
+		height: $height-range-bounds;
+		cursor: pointer;
+		user-select: none;
+	}
+
+	//Track
+	.rangeslider:before {
+		@include range-track();
+		content: "";
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	input::-webkit-slider-runnable-track, {
+		@include range-track();
+		margin: $height-range-bounds / 2 0;
+	}
+	input::-moz-range-track {
+		@include range-track();
+		margin: $height-range-bounds / 2 0;
+	}
+	input::-ms-track {
+		@include range-track();
+		color: transparent;
+		padding: $height-range-bounds / 2 0;
+		background: transparent;
+		border-color: transparent;
+	}
+
+	//Track fill
+	input::-ms-fill-lower,
+	input::-ms-fill-upper {
+		@include range-track();
+	}
+	input::-ms-fill-lower {
+		background: $fill-range-track-active;
+	}
+	.rangeslider-fill-lower {
+		background-color: $fill-range-track-active;
+		border-radius: $radius-range-track;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		height: $height-range-track;
+		will-change: width;
+	}
+
+	//Thumb
+	input::-webkit-slider-thumb {
+		@include range-thumb();
+		appearance: none;
+		transform: translateY(-50%);
+		margin-top: $height-range-track / 2;
+	}
+	input::-moz-range-thumb {
+		@include range-thumb();
+	}
+	input::-ms-thumb {
+		@include range-thumb();
+	}
+	.rangeslider-thumb {
+		@include range-thumb();
+		position: absolute;
+		touch-action: pan-x;
+		top: 50%;
+		transform: translateY(-50%);
+		will-change: left;
+	}
+
+	.range-output {
+		position: absolute;
+		left: ($width-range-thumb - $border-width-range-thumb * 2) / 2;
+		top: ($width-range-thumb - $border-width-range-thumb * 2) / 2;
+		transform-origin: 0 0;
+		transition: transform .4s $easeOutBack;
+		user-select: none;
+
+		.output {
+			display: block;
+			position: absolute;
+			height: $height-range-output;
+			line-height: $height-range-output;
+			min-width: $min-width-range-output;
+			padding: 0 $padding-x-range-output;
+			top: - ($width-range-thumb / 2) - $offset-y-range-output - $size-range-output-arrow;
+			transform: translate(-50%, -100%);
+			background: $color-range-output;
+			color: #fff;
+			border-radius: 100px;
+			white-space: nowrap;
+			font-weight: bold;
+			font-size: 1.2em;
+			text-align: center;
+
+			&:before {
+				content: "";
+				position: absolute;
+				bottom: - $size-range-output-arrow + 2px; //Subtract 2 to get slight overlap that renders more nicely
+				left: 50%;
+				border: $size-range-output-arrow solid $color-range-output;
+				border-bottom: none;
+				border-left-color: transparent;
+				border-right-color: transparent;
+				transform: translateX(-50%);
+			}
+		}
+	}
 }

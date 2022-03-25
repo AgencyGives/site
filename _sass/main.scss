@@ -1,6 +1,6 @@
 /* Imports */
 
-@import url("https://fonts.googleapis.com/css?family=Monda:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap");
 
 /* Variables */
@@ -8,8 +8,8 @@
 $small-screen: 48em !default;
 $medium-screen: 62em !default;
 $large-screen: 75em !default;
-$font-family: "Oxygen Mono", monospace;
-$font-family-numbers: 'Oxygen Mono', monospace;
+$font-family: 'Roboto Mono', monospace;
+$font-family-numbers: 'Roboto Mono', monospace;
 $font-family-headings: 'Monda', monospace;
 $font-size-base: 1rem !default;
 $font-size-h1: 2rem !default;
@@ -21,7 +21,15 @@ $card-bg-color: linear-gradient(
   rgba(115, 115, 115, 0.15) 15%,
   rgba(43, 45, 47, 1) 80%
 );
-$primary-color: #00ff00;
+$primary-color: #fff;
+$green: #00FF47;
+$blue: #0094FF;
+$yellow: #FEE502;
+$grey: #3F3F3F;
+
+.green { color: $green ;}
+.blue { color: $blue ;}
+.yellow { color: $yellow ;}
 
 /* General */
 
@@ -99,6 +107,17 @@ a {
     box-shadow: inset 0 -2rem 0 0 $primary-color;
     color: $text-color;
   }
+}
+
+.post {
+  position: absolute;
+width: 696px;
+height: 697px;
+left: 1764px;
+top: 1205px;
+
+background: #FFFFFF;
+border-radius: 30px;
 }
 
 .center {
@@ -291,8 +310,15 @@ a {
 
 /* Landing Page */
 
+#star-bg {
+  background: url("https://justicedao.github.io/site/assets/img/bg.png");
+  background-repeat: repeat-y;
+}
+
 .logo {
+  text-align: left;
   letter-spacing: -1.8px;
+  top: 0%;
 }
 .logo-part1 {
   font-weight: 300;
